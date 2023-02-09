@@ -1,5 +1,5 @@
 [package]
-name = "server-card-rs"
+name = "server-user-rs"
 version = "0.1.0"
 edition = "2021"
 
