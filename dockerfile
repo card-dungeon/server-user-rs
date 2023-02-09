@@ -16,4 +16,4 @@ COPY --from=builder /usr/src/project/target/release/server-user-rs .
 
 EXPOSE 3000
 
-CMD ["/server-oauth-rs"]
+CMD ["/server-user-rs"]
