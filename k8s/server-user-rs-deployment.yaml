@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: server-user-rs
-          image: gmae199boy/secret-dungeon-user-rs:0.0.1
+          image: gmae199boy/secret-dungeon-user-rs:0.0.2
           ports:
             - containerPort: 3000
               name: user-port
