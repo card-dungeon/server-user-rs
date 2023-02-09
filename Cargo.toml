@@ -9,6 +9,7 @@ edition = "2021"
 tokio = { version = "*", features = ["full"] }
 tokio-stream = "*"
 axum = "*"
+serde_urlencoded = "*"
 serde_json = "*"
 serde = "*"
 tracing = "*"

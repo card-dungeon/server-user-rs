@@ -8,5 +8,8 @@ pub struct User {
     pub nickname: String,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub email: Option<String>,
-    // pub password: String,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub oauth_id: Option<String>,
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub cards: Option<Vec<u32>>,
 }

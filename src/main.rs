@@ -13,7 +13,7 @@ use tracing::Level;
 async fn main() {
     dotenv::dotenv().ok();
 
-    // let database = db::connector::init().await.unwrap();
+    let database = db::connector::init().await.unwrap();
 
     let subscriber = FmtSubscriber::builder()
     .with_max_level(Level::INFO)
@@ -23,8 +23,8 @@ async fn main() {
 
     let app = Router::new()
     .route("/user/signin", get(handler::user::signin))
-    .route("/user/redirect", get(handler::user::kakao_redirect));
-    // .with_state(database);
+    .route("/user/redirect", get(handler::user::kakao_redirect))
+    .with_state(database);
 
     let addr = SocketAddr::from(([0, 0, 0, 0], 3000));
 

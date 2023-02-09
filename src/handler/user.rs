@@ -18,7 +18,7 @@ pub struct Querys {
 }
 
 pub async fn signin() -> impl IntoResponse {
-    Redirect::permanent(&format!("https://kauth.kakao.com/oauth/authorize?client_id={}&redirect_uri={}&response_type=code", std::env::var("KAKAO_API_KEY").expect("no env"), "http://localhost:3000/user/redirect"))
+    
 }
 
 pub async fn kakao_redirect(
